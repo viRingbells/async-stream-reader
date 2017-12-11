@@ -1,7 +1,7 @@
 'use strict';
 
 const assert        = require('assert');
-const debug         = require('debug')('stream-reader');
+const debug         = require('debug')('async-stream-reader');
 const stream        = require('stream');
 const EventEmitter  = require('events');
 
@@ -24,6 +24,7 @@ class Reader {
         this._pause = options.pause || 'pause';
         this._resume = options.resume || 'resume';
         this._isPaused = options.isPaused || 'isPaused';
+        this._endArgument = options.end || undefined;
         this._emitter = new EventEmitter();
         const events = options.events || {};
         let dataEvents = events.data || 'data';
@@ -98,7 +99,7 @@ class Reader {
         }
         if (type === Reader.END) {
             debug('end');
-            return undefined;
+            return this._endArgument;
         }
         return result;
     }

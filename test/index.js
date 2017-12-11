@@ -4,7 +4,7 @@ const fs            = require('fs');
 const readline      = require('readline');
 const EventEmitter  = require('events');
 const LineByLine    = require('line-by-line');
-const StreamReader  = require('stream-reader');
+const StreamReader  = require('async-stream-reader');
 
 
 function generateReader(before, after) {
@@ -64,7 +64,7 @@ function prepareLargeFile() {
     if (tmpFileName) {
         return tmpFileName;
     }
-    tmpFileName = `/tmp/test-stream-reader-fake-file`;
+    tmpFileName = `/tmp/test-async-stream-reader-fake-file`;
     fs.writeFileSync(tmpFileName, '');
     for (let i = 0; i < 1000; i++) {
         let line = [i];

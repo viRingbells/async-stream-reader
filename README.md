@@ -1,4 +1,4 @@
-# stream-reader
+# async-stream-reader
 ===============
 
 [![NPM version][npm-image]][npm-url]
@@ -11,7 +11,7 @@ An async way to read stream
 
 Sometime you may want to read something from a stream, typically a file stream, in an async-await style. This tool may help you by providing an async read method for stream and events like object.
 
-The `stream-reader` holds events and return them one by one every time `async StreamReader#next` get called. If `stream-reader` has got some events in the holder, it will try to pause the input stream, and resume if the holder get empty.
+The `async-stream-reader` holds events and return them one by one every time `async StreamReader#next` get called. If `async-stream-reader` has got some events in the holder, it will try to pause the input stream, and resume if the holder get empty.
 
 So as long as the input stream support `pause` and `resume`, you can just do your work at each frame of data at ease, without worring missing something, or memory consumed in large quantities
 
@@ -20,7 +20,7 @@ So as long as the input stream support `pause` and `resume`, you can just do you
 ```
 const fs            = require('fs');
 const readline      = require('readline');
-const StreamReader  = require('stream-reader');
+const StreamReader  = require('async-stream-reader');
 
 const rl = readline.createInterface({
     input: fs.createReadStream("./foo.txt");
@@ -48,9 +48,9 @@ main().catch(error => console.log(error));
 
 
 
-[npm-image]: https://img.shields.io/npm/v/stream-reader.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/stream-reader
-[travis-image]: https://img.shields.io/travis/larkjs/stream-reader/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/larkjs/stream-reader
-[coveralls-image]: https://img.shields.io/codecov/c/github/larkjs/stream-reader.svg?style=flat-square
-[coveralls-url]: https://codecov.io/github/larkjs/stream-reader?branch=master
+[npm-image]: https://img.shields.io/npm/v/async-stream-reader.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/async-stream-reader
+[travis-image]: https://img.shields.io/travis/larkjs/async-stream-reader/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/larkjs/async-stream-reader
+[coveralls-image]: https://img.shields.io/codecov/c/github/larkjs/async-stream-reader.svg?style=flat-square
+[coveralls-url]: https://codecov.io/github/larkjs/async-stream-reader?branch=master
