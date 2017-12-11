@@ -1,4 +1,10 @@
 # stream-reader
+===============
+
+[![NPM version][npm-image]][npm-url]
+[![build status][travis-image]][travis-url]
+[![Test coverage][coveralls-image]][coveralls-url]
+
 An async way to read stream
 
 ## Why
@@ -39,3 +45,12 @@ main().catch(error => console.log(error));
 
 * readableStream: The stream you want to read data from. In fact it can be either a readable stream or an event emitter. the reaableStream should have method 'on' to listen to the data/end/error events, and methods 'pause' / 'resume' / 'isPaused' to control the input flow (but input flow control methods are not required, though missing them may cause events stacking in a large amount). 
 * options: 'options.puase', 'options.resume' and 'options.isPuased' should be strings and refers to the method names to control the input stream, defaults are 'pause', 'resume' and 'isPaused'. options.events is an object with properties 'data', 'end' and 'error', each of them refers to the name of the event the stream should emit. Event name can be a string or an array of strings.
+
+
+
+[npm-image]: https://img.shields.io/npm/v/stream-reader.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/stream-reader
+[travis-image]: https://img.shields.io/travis/larkjs/stream-reader/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/larkjs/stream-reader
+[coveralls-image]: https://img.shields.io/codecov/c/github/larkjs/stream-reader.svg?style=flat-square
+[coveralls-url]: https://codecov.io/github/larkjs/stream-reader?branch=master
