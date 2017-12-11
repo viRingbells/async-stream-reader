@@ -49,7 +49,7 @@ main().catch(error => console.log(error));
 
 [npm-image]: https://img.shields.io/npm/v/async-stream-reader.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/async-stream-reader
-[travis-image]: https://img.shields.io/travis/viringbells/async-stream-reader/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/viringbells/async-stream-reader
-[coveralls-image]: https://img.shields.io/codecov/c/github/viringbells/async-stream-reader.svg?style=flat-square
-[coveralls-url]: https://codecov.io/github/viringbells/async-stream-reader?branch=master
+[travis-image]: https://img.shields.io/travis/viRingbells/async-stream-reader/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/viRingbells/async-stream-reader
+[coveralls-image]: https://img.shields.io/codecov/c/github/viRingbells/async-stream-reader.svg?style=flat-square
+[coveralls-url]: https://codecov.io/github/viRingbells/async-stream-reader?branch=master
