@@ -7,10 +7,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import * as assert from 'assert';
-import * as Debug from 'debug';
-import * as Stream from 'stream';
-import * as EventEmitter from 'events';
+Object.defineProperty(exports, "__esModule", { value: true });
+const assert = require("assert");
+const Debug = require("debug");
+const Stream = require("stream");
+const EventEmitter = require("events");
 const debug = Debug('async-stream-reader');
 const DATA = Symbol('READER DATA');
 const END = Symbol('READER END');
