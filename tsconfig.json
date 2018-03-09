@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "outDir": "./built",
+    "allowJs": true,
+    "target": "es6",
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "module": "CommonJS"
+  },
+  "include": [
+    "./index.ts"
+  ]
+}

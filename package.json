@@ -1,12 +1,15 @@
 {
-  "name": "async-stream-reader",
-  "version": "1.0.0",
-  "description": "An stream reader with async functions",
-  "main": "index.js",
+  "name": "async-stream-reader-divvito",
+  "version": "1.1.0",
+  "description": "A stream reader with async functions",
+  "main": "built/index.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
+    "@types/debug": "^0.0.30",
+    "@types/line-by-line": "^0.1.2",
+    "@types/node": "^7.0.56",
     "debug": "^3.1.0"
   },
   "devDependencies": {
@@ -23,12 +26,10 @@
     "test:prepare-env": "npm link && npm link async-stream-reader",
     "pretest": "npm run test:clear-env && npm run lint && npm run test:prepare-env",
     "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --require should --recursive test",
-    "posttest": "npm run test:clear-env"
+    "posttest": "npm run test:clear-env",
+    "build": "tsc"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/viRingbells/async-stream-reader.git"
-  },
+  "repository": "git+https://github.com/divvito/async-stream-reader.git",
   "keywords": [
     "stream",
     "read",
@@ -36,10 +37,11 @@
     "async",
     "await"
   ],
-  "author": "Sun Haohao",
+  "author": "Sun Haohao - typescript version by Divvito (Chris O'Kelly)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/viRingbells/async-stream-reader/issues"
+    "url": "https://github.com/divvito/async-stream-reader/issues"
   },
-  "homepage": "https://github.com/viRingbells/async-stream-reader#readme"
+  "homepage": "https://github.com/divvito/async-stream-reader#readme",
+  "private": false
 }
