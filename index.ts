@@ -132,7 +132,7 @@ class Reader {
         }
         this.resume();
         await this._emitted();
-        return await this.nextEvent();
+        return this.nextEvent();
     }
 
     async next(): Promise<any> {

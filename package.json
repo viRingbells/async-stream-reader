@@ -1,6 +1,6 @@
 {
-  "name": "async-stream-reader-divvito",
-  "version": "1.1.0",
+  "name": "async-stream-reader",
+  "version": "1.2.0",
   "description": "A stream reader with async functions",
   "main": "built/index.js",
   "directories": {
@@ -29,7 +29,7 @@
     "posttest": "npm run test:clear-env",
     "build": "tsc"
   },
-  "repository": "git+https://github.com/divvito/async-stream-reader.git",
+  "repository": "git+https://github.com/viRingbells/async-stream-reader.git",
   "keywords": [
     "stream",
     "read",
@@ -40,8 +40,8 @@
   "author": "Sun Haohao - typescript version by Divvito (Chris O'Kelly)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/divvito/async-stream-reader/issues"
+    "url": "https://github.com/viRingbells/async-stream-reader/issues"
   },
-  "homepage": "https://github.com/divvito/async-stream-reader#readme",
+  "homepage": "https://github.com/viRingbells/async-stream-reader#readme",
   "private": false
 }
