@@ -30,7 +30,7 @@ const reader = new StreamReader(rl, {
 
 async main() {
     let line;
-    while (line = await reader.next()) {
+    while (Reader.END !== (line = await reader.next())) {
         console.log(line);
     }
 }
