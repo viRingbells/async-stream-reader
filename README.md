@@ -28,7 +28,7 @@ const reader = new StreamReader(rl, {
     events: { data: 'line', end: 'close' },
 });
 
-async main() {
+async function main() {
     let line;
     while (Reader.END !== (line = await reader.next())) {
         console.log(line);
